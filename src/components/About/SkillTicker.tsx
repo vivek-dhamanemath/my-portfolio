@@ -24,7 +24,7 @@ export default function SkillTicker() {
     const doubledSkills = [...SKILLS, ...SKILLS];
 
     return (
-        <div className="relative w-full overflow-hidden bg-zinc-950 py-8 border-y border-zinc-900 my-8">
+        <div className="relative w-full overflow-hidden bg-zinc-950 py-8 border-y border-zinc-900">
             <div className="flex animate-marquee whitespace-nowrap items-center w-max">
                 {doubledSkills.map((skill, index) => (
                     <div key={index} className="flex items-center gap-4 px-12">

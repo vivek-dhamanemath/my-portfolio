@@ -13,6 +13,13 @@ export default function IntroductionSection() {
                     <p>
                         Currently, I am seeking opportunities to contribute my technical proficiency and problem-solving mindset to a forward-thinking engineering team where I can drive meaningful impact through code.
                     </p>
+
+                    {/* Editorial Signature */}
+                    <div className="mt-8">
+                        <p className="font-serif text-lg italic text-zinc-400">Sincerely,</p>
+                        <p className="mt-4 font-serif text-3xl text-zinc-900 dark:text-zinc-100">Vivek Dhamanemath</p>
+                        <p className="mt-2 text-xs font-bold uppercase tracking-widest text-zinc-400">Software Developer</p>
+                    </div>
                 </div>
             </section>
         </div>

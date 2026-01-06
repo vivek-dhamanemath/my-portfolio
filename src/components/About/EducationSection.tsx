@@ -18,24 +18,31 @@ const EDUCATION = [
 export default function EducationSection() {
     return (
         <section>
-            <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-10">Education</h2>
-            <div className="flex flex-col gap-12">
+            <h2 className="mb-10 text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Education</h2>
+
+            <div className="relative ml-3 space-y-12 border-l-2 border-zinc-100 dark:border-zinc-800 md:ml-6">
                 {EDUCATION.map((edu, index) => (
-                    <div key={index} className="flex gap-6 sm:gap-10">
-                        <div className="flex-shrink-0">
-                            <div className="h-20 w-20 overflow-hidden rounded-full border border-zinc-100 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 flex items-center justify-center">
-                                <img
-                                    src={edu.logo}
-                                    alt={edu.school}
-                                    className="h-14 w-14 object-contain transition-all duration-500"
-                                />
-                            </div>
+                    <div key={index} className="relative pl-8 md:pl-12">
+                        {/* Timeline Marker (Logo) */}
+                        <div className="absolute -left-[41px] top-0 flex h-20 w-20 items-center justify-center rounded-full bg-white ring-4 ring-white dark:bg-black dark:ring-black">
+                            <img
+                                src={edu.logo}
+                                alt={edu.school}
+                                className="h-full w-full rounded-full object-contain p-2 opacity-80"
+                            />
                         </div>
-                        <div className="flex flex-col gap-2 transition-transform duration-500 hover:translate-x-1">
-                            <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">{edu.school}</h3>
-                            <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">{edu.degree}</p>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">{edu.period}</p>
-                            <p className="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+
+                        <div className="flex flex-col gap-1">
+                            <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">
+                                {edu.period}
+                            </span>
+                            <h3 className="font-serif text-xl font-medium text-zinc-900 dark:text-zinc-100">
+                                {edu.school}
+                            </h3>
+                            <p className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
+                                {edu.degree}
+                            </p>
+                            <p className="mt-2 max-w-lg text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                                 {edu.description}
                             </p>
                         </div>

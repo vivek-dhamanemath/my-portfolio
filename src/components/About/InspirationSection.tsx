@@ -1,10 +1,13 @@
 export default function InspirationSection() {
     return (
-        <div>
-            <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-6 border-b border-zinc-100 pb-2 dark:border-zinc-900">Inspiration</h2>
-            <p className="text-sm italic text-zinc-500 leading-relaxed">
-                "The best way to predict the future is to invent it." — Alan Kay
-            </p>
+        <div className="text-center py-8 sm:py-16">
+            <blockquote className="font-serif text-3xl font-light italic leading-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl md:text-5xl">
+                &ldquo;The best way to <span className="text-zinc-400 dark:text-zinc-600">predict</span> the future <br className="hidden sm:block" />
+                is to <span className="text-zinc-400 dark:text-zinc-600">invent</span> it.&rdquo;
+            </blockquote>
+            <cite className="mt-8 block font-sans text-xs font-bold uppercase tracking-widest text-zinc-400 not-italic">
+                — Alan Kay
+            </cite>
         </div>
     );
 }

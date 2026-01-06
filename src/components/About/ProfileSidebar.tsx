@@ -30,6 +30,19 @@ export default function ProfileSidebar() {
                         </div>
                     </div>
                 </div>
+
+                <div className="mt-6 pt-6 border-t border-zinc-200 dark:border-zinc-800">
+                    <a
+                        href="/about/resume.pdf"
+                        download="Vivek_Dhamanemath_Resume.pdf"
+                        className="group flex w-full items-center justify-between rounded-lg bg-zinc-900 px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-zinc-100 transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+                    >
+                        <span>Download CV</span>
+                        <svg className="h-4 w-4 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </aside>
     );
