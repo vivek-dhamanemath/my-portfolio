@@ -8,11 +8,11 @@ export default function Navbar() {
                 Vivek JD
             </Link>
 
-            {/* Navigation Links */}
             <div className="flex items-center gap-6 sm:gap-8">
                 <Link href="/#home" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors">Home</Link>
                 <Link href="/about" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors">About</Link>
                 <Link href="/#projects" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors">Projects</Link>
+                <Link href="/#certifications" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors">Certifications</Link>
                 <Link href="/#contact" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors">Contact</Link>
             </div>
         </nav>

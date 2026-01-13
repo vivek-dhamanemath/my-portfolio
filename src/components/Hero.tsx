@@ -54,7 +54,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id="home" className="relative flex min-h-[90vh] flex-col items-center justify-center pt-32 text-center">
+        <section id="home" className="relative flex min-h-[90vh] flex-col items-center justify-center pt-32 text-center scroll-mt-32">
 
             {/* Live IST Clock Stamp */}
             <div className="absolute top-32 right-5 hidden flex-col items-end gap-0.5 sm:flex lg:right-[2%] xl:right-[-2%]">

@@ -1,10 +1,10 @@
 export default function Contact() {
     return (
-        <section id="contact" className="py-32 container mx-auto px-6 sm:px-10">
+        <section id="contact" className="py-32 container mx-auto px-6 sm:px-10 scroll-mt-32">
             <div className="flex flex-col items-center text-center">
                 {/* Editorial Label */}
                 <span className="mb-8 font-sans text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
-                    Get in Touch
+                    04. Get in Touch
                 </span>
 
                 {/* Hero Invite */}

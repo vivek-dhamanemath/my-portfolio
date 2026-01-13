@@ -15,7 +15,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-24 sm:py-32">
+        <section id="about" className="py-24 sm:py-32 scroll-mt-32">
             <div className="border-t border-zinc-200 pt-16 dark:border-zinc-800">
                 <div className="grid grid-cols-1 gap-12 sm:grid-cols-12 sm:gap-16 lg:gap-24">
                     {/* Left Side: Visual Identity */}
@@ -32,7 +32,7 @@ export default function About() {
                     {/* Right Side: Narrative */}
                     <div className="sm:col-span-7 lg:col-span-8">
                         <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
-                            01. About
+                            03. About
                         </span>
                         <h2 className="font-serif text-4xl font-light tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-7xl">
                             A focused approach <br />
