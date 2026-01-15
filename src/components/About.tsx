@@ -77,13 +77,21 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className="mt-16">
+                        <div className="mt-16 flex flex-wrap gap-x-8 gap-y-4">
                             <Link
                                 href="/about"
                                 className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-900 dark:text-zinc-100 transition-colors hover:text-zinc-600 dark:hover:text-zinc-400"
                             >
                                 Know more about me
                                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            </Link>
+
+                            <Link
+                                href="/journals"
+                                className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+                            >
+                                Exploring the archive
+                                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">↗</span>
                             </Link>
                         </div>
                     </div>
