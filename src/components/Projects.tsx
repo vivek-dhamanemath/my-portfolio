@@ -21,7 +21,7 @@ const PROJECTS = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 sm:py-32 scroll-mt-32">
+        <section id="projects" className="py-24 sm:py-32 scroll-mt-1">
             <div className="border-t border-zinc-200 pt-16 dark:border-zinc-800">
                 <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
                     01. Projects

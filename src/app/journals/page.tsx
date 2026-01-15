@@ -5,17 +5,22 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import JournalCard from "@/components/Journal/JournalCard";
+import JournalMap from "@/components/Journal/JournalMap";
+import JournalSpotlight from "@/components/Journal/JournalSpotlight";
 import {
     journalEntries,
     getJournalEntriesByCategory,
     journalCategories,
     type JournalCategory,
+    JournalEntry,
 } from "@/data/journals";
 
 function JournalsContent() {
     const searchParams = useSearchParams();
+    const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
     const [selectedCategory, setSelectedCategory] = useState<JournalCategory | "all">("all");
     const [filteredEntries, setFilteredEntries] = useState(journalEntries);
+    const [activeEntry, setActiveEntry] = useState<JournalEntry | null>(null);
     const [hasMounted, setHasMounted] = useState(false);
 
     useEffect(() => {
@@ -29,6 +34,12 @@ function JournalsContent() {
     return (
         <div className="relative min-h-screen bg-white selection:bg-zinc-100 dark:bg-black dark:selection:bg-zinc-900">
             <Navbar />
+
+            {/* Spotlight Modal */}
+            <JournalSpotlight
+                entry={activeEntry}
+                onClose={() => setActiveEntry(null)}
+            />
 
             <main className="mx-auto max-w-7xl px-6 pt-32 sm:px-10">
                 {/* Back Navigation */}
@@ -44,13 +55,31 @@ function JournalsContent() {
 
                 {/* Hero Section - Magazine Style */}
                 <div className="mb-20">
-                    <div className="flex flex-col gap-4">
-                        <span className="font-mono text-xs font-bold tracking-[0.4em] text-zinc-400 dark:text-zinc-600">
-                            LIFELONG_ARCHIVE // 05
-                        </span>
-                        <h1 className="font-serif text-6xl font-light tracking-tighter text-zinc-900 dark:text-zinc-100 sm:text-9xl">
-                            The <span className="italic text-zinc-400 dark:text-zinc-600">Journals.</span>
-                        </h1>
+                    <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+                        <div className="flex flex-col gap-4">
+                            <span className="font-mono text-xs font-bold tracking-[0.4em] text-zinc-400 dark:text-zinc-600">
+                                LIFELONG_ARCHIVE // 05
+                            </span>
+                            <h1 className="font-serif text-6xl font-light tracking-tighter text-zinc-900 dark:text-zinc-100 sm:text-9xl">
+                                The <span className="italic text-zinc-400 dark:text-zinc-600">Journals.</span>
+                            </h1>
+                        </div>
+
+                        {/* View Switcher */}
+                        <div className="flex items-center rounded-full border border-zinc-200 p-1 dark:border-zinc-800">
+                            <button
+                                onClick={() => setViewMode('grid')}
+                                className={`rounded-full px-6 py-2 text-[10px] font-bold uppercase tracking-widest transition-all ${viewMode === 'grid' ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-black' : 'text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100'}`}
+                            >
+                                Grid View
+                            </button>
+                            <button
+                                onClick={() => setViewMode('map')}
+                                className={`rounded-full px-6 py-2 text-[10px] font-bold uppercase tracking-widest transition-all ${viewMode === 'map' ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-black' : 'text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100'}`}
+                            >
+                                Map Explorer
+                            </button>
+                        </div>
                     </div>
 
                     <p className="mt-12 max-w-2xl font-sans text-lg font-light leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-2xl">
@@ -77,17 +106,26 @@ function JournalsContent() {
                     </div>
                 </div>
 
-                {/* Main Masonry-Like Grid */}
-                <div className="columns-1 gap-8 space-y-8 pb-32 md:columns-2 lg:columns-3">
-                    {filteredEntries.map((entry, index) => (
-                        <div key={entry.id} className="break-inside-avoid">
-                            <JournalCard
-                                entry={entry}
-                                index={index}
-                            />
-                        </div>
-                    ))}
-                </div>
+                {/* Conditional Rendering: Grid or Map */}
+                {viewMode === 'grid' ? (
+                    <div className="columns-1 gap-8 space-y-8 pb-32 md:columns-2 lg:columns-3">
+                        {filteredEntries.map((entry, index) => (
+                            <div key={entry.id} className="break-inside-avoid">
+                                <JournalCard
+                                    entry={entry}
+                                    index={index}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="pb-32">
+                        <JournalMap
+                            entries={filteredEntries}
+                            onMarkerClick={(entry) => setActiveEntry(entry)}
+                        />
+                    </div>
+                )}
 
                 {/* Empty State */}
                 {filteredEntries.length === 0 && (

@@ -15,7 +15,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-24 sm:py-32 scroll-mt-32">
+        <section id="about" className="py-24 sm:py-32 scroll-mt-1">
             <div className="border-t border-zinc-200 pt-16 dark:border-zinc-800">
                 <div className="grid grid-cols-1 gap-12 sm:grid-cols-12 sm:gap-16 lg:gap-24">
                     {/* Left Side: Visual Identity */}

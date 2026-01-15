@@ -44,7 +44,7 @@ export default function Certifications() {
         <section
             id="certifications"
             ref={sectionRef}
-            className="py-24 sm:py-32 scroll-mt-32"
+            className="py-24 sm:py-32 scroll-mt-1"
         >
             <div className="border-t border-zinc-200 pt-16 dark:border-zinc-800">
                 {/* Section Header */}

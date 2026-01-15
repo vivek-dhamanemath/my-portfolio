@@ -5,6 +5,7 @@ export interface JournalEntry {
     title: string;
     description: string;
     location: string;
+    coordinates?: [number, number]; // [longitude, latitude]
     date: string; // "Dec 2024"
     image: string; // "/journal/event-name.jpg"
     category: JournalCategory;
@@ -16,7 +17,8 @@ export const journalEntries: JournalEntry[] = [
         id: 'convocation-2024',
         title: 'Master\'s Convocation',
         description: 'The culmination of two years of hard work, learning, and growth. Receiving my MCA degree was a moment of immense pride.',
-        location: 'University Campus',
+        location: 'Belagavi, India',
+        coordinates: [77.5946, 12.9716],
         date: 'June 2024',
         image: '/journal/convocation.jpg',
         category: 'convocation',
@@ -27,6 +29,7 @@ export const journalEntries: JournalEntry[] = [
         title: 'Coastal Reflections',
         description: 'Finding peace and inspiration along the shores of Goa. A much-needed break to recharge and explore new horizons.',
         location: 'South Goa, India',
+        coordinates: [73.9116, 15.2993],
         date: 'Nov 2023',
         image: '/journal/goa.jpg',
         category: 'travel',
@@ -36,7 +39,8 @@ export const journalEntries: JournalEntry[] = [
         id: 'college-farewell',
         title: 'Final Chapter',
         description: 'Saying goodbye to the halls that saw us grow from students to professionals. A bittersweet celebration of friendships.',
-        location: 'Department of MCA',
+        location: 'Bengaluru, India',
+        coordinates: [77.5806, 12.9724],
         date: 'May 2024',
         image: '/journal/farewell.jpg',
         category: 'farewell',
@@ -46,7 +50,8 @@ export const journalEntries: JournalEntry[] = [
         id: 'college-diaries-01',
         title: 'Daily Rhythms',
         description: 'Candid moments between lectures. These small coffee breaks and debates shaped our perspective more than textbooks ever could.',
-        location: 'College Canteen',
+        location: 'Bengaluru, India',
+        coordinates: [77.6101, 12.9352],
         date: 'Feb 2023',
         image: '/journal/college-life.jpg',
         category: 'college',
