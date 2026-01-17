@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { JournalEntry } from "@/data/journals";
+import { JournalEntry } from "./journals";
 
 interface JournalSpotlightProps {
     entry: JournalEntry | null;
@@ -24,7 +24,7 @@ export default function JournalSpotlight({ entry, onClose }: JournalSpotlightPro
                 {/* Visual Content */}
                 <div className="relative flex flex-col justify-center overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-900">
                     <img
-                        src={entry.image}
+                        src={entry.photos[0].url}
                         alt={entry.title}
                         className="h-full w-full object-cover transition-transform duration-[2s] hover:scale-110"
                     />

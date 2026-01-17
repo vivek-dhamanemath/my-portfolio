@@ -8,7 +8,7 @@ import {
     Marker,
     ZoomableGroup
 } from "react-simple-maps";
-import { JournalEntry } from "@/data/journals";
+import { JournalEntry } from "./journals";
 
 // A highly reliable World GeoJSON that includes India. 
 // Using GeoJSON can sometimes be more compatible with react-simple-maps' default behavior.
