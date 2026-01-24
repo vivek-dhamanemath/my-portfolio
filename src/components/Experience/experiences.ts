@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
         duration: "June 2024 - September 2024",
         startDate: "2024-06-01",
         endDate: "2024-09-30",
-        location: "Remote",
+        location: "on-site",
         description: "Contributed to full-stack development of SaaS product during internship.",
         achievements: [
             "Built responsive frontend components using React and TypeScript",

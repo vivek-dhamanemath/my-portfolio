@@ -32,7 +32,7 @@ export default function About() {
                     {/* Right Side: Narrative */}
                     <div className="sm:col-span-7 lg:col-span-8">
                         <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
-                            03. About
+                            01. About
                         </span>
                         <h2 className="font-serif text-4xl font-light tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-7xl">
                             A focused approach <br />

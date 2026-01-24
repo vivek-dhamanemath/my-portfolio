@@ -66,12 +66,12 @@ export default function Hero() {
                 </span>
             </div>
 
-            <div className="mb-12 inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50/50 px-5 py-2 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/50">
+            {/* <div className="mb-12 inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50/50 px-5 py-2 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/50">
                 <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
                 <span className="text-xs font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
                     Available for opportunities
                 </span>
-            </div>
+            </div> */}
 
             <h1 className={`relative z-10 flex flex-col items-center font-serif text-6xl font-black uppercase tracking-tighter transition-all duration-500 sm:text-9xl ${fade ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
                 <span className="text-zinc-900 dark:text-zinc-100">
@@ -93,7 +93,7 @@ export default function Hero() {
                     View Portfolio
                 </a>
                 <span className="hidden text-zinc-300 dark:text-zinc-700 sm:block">/</span>
-                <a href="#contact" className="group flex items-center gap-2 border-b-2 border-transparent pb-1 font-sans text-xs font-bold uppercase tracking-widest text-zinc-500 transition-colors hover:border-zinc-900 hover:text-zinc-900 dark:text-zinc-500 dark:hover:border-zinc-100 dark:hover:text-zinc-100">
+                <a href="#contact-section" className="group flex items-center gap-2 border-b-2 border-transparent pb-1 font-sans text-xs font-bold uppercase tracking-widest text-zinc-500 transition-colors hover:border-zinc-900 hover:text-zinc-900 dark:text-zinc-500 dark:hover:border-zinc-100 dark:hover:text-zinc-100">
                     Get in touch
                 </a>
             </div>

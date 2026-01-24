@@ -7,11 +7,9 @@ import { getFeaturedCertifications } from "./Certifications/certifications";
 
 export default function Certifications() {
     const [isVisible, setIsVisible] = useState(true); // Default to true to ensure visibility during debugging
-    const [hasMounted, setHasMounted] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
-        setHasMounted(true);
         // We still use the observer for the scroll animation, but we set initial isVisible to true if preferred
         // or keep it false and ensure the observer works.
         const observer = new IntersectionObserver(
@@ -38,8 +36,6 @@ export default function Certifications() {
 
     const featuredCertifications = getFeaturedCertifications();
 
-    if (!hasMounted) return null;
-
     return (
         <section
             id="certifications"
@@ -50,7 +46,7 @@ export default function Certifications() {
                 {/* Section Header */}
                 <div className="mb-16">
                     <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">
-                        02. Certifications
+                        04. Certifications
                     </span>
                     <h2 className="font-serif text-4xl font-light tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-7xl">
                         Continuous{" "}
